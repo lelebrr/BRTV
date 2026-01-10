@@ -54,13 +54,13 @@
     <string name="abc_searchview_description_submit">Submit query</string>
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="about_us">About RedBeanTV</string>
+    <string name="about_us">About Mtech</string>
     <string name="about_us_text" />
     <string name="advise_delete_outdated_programs">The resource has been removed，please delete the collection.</string>
     <string name="already_latest_version">Already latest version!</string>
     <string name="androidx_startup">androidx.startup</string>
     <string name="app_id">CC1AD845</string>
-    <string name="app_name">BRTV</string>
+    <string name="app_name">Mtech</string>
     <string name="auto_start">Run After Bootup</string>
     <string name="auto_start_off">Off</string>
     <string name="auto_start_on">On</string>
