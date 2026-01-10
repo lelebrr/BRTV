@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/selector_item_vod_episode"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="158dp"
+    android:layout_height="32dp">
+    <TextView
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@drawable/selector_vod_episode_text_color"
+        android:id="@+id/item_tv"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

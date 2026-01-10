@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/message_layout" android:layout_width="250.0dip" android:layout_height="200.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/message_head" android:background="@drawable/popup_window" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip">
+            <ImageView android:id="@id/message_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:src="@mipmap/error1" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/message_text" android:id="@id/message_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:text="@string/errorTitle" android:layout_toRightOf="@id/message_icon" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/popup_window1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/message_head" android:layout_centerInParent="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@color/message_body" android:id="@id/message_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" android:text="" android:singleLine="false" android:lineSpacingExtra="5.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/message_body" android:layout_gravity="left" android:id="@id/connectingTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip" android:text="" android:singleLine="false" android:lineSpacingExtra="5.0dip" />
+        </LinearLayout>
+        <Button android:textSize="13.0sp" android:textColor="@color/dialog_button" android:gravity="center" android:layout_gravity="center" android:id="@id/close_button" android:background="@drawable/dialog_btn_bg_select1" android:layout_width="70.0dip" android:layout_height="20.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:text="@string/close" android:layout_centerInParent="true" />
+    </LinearLayout>
+</LinearLayout>

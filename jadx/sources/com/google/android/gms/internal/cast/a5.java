@@ -1,0 +1,38 @@
+package com.google.android.gms.internal.cast;
+
+/* compiled from: MyApplication */
+/* loaded from: classes.dex */
+public final class a5 extends c7 {
+    private static final a5 zzb;
+    private int zzd;
+    private int zze;
+    private int zzf;
+
+    static {
+        a5 a5Var = new a5();
+        zzb = a5Var;
+        c7.e(a5.class, a5Var);
+    }
+
+    @Override // com.google.android.gms.internal.cast.c7
+    public final Object h(int i6, c7 c7Var) {
+        int i10 = i6 - 1;
+        if (i10 == 0) {
+            return (byte) 1;
+        }
+        if (i10 == 2) {
+            i2 i2Var = i2.f4236q;
+            return new u7(zzb, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001᠌\u0000\u0002᠌\u0001", new Object[]{"zzd", "zze", i2Var, "zzf", i2Var});
+        }
+        if (i10 == 3) {
+            return new a5();
+        }
+        if (i10 == 4) {
+            return new g4(zzb);
+        }
+        if (i10 == 5) {
+            return zzb;
+        }
+        throw null;
+    }
+}

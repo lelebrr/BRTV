@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.bitspark.android.view.MyProcessRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_vod_new_episode"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="72dp"
+    android:layout_height="30dp"
+    app:focusColor="@color/white"
+    app:processHeight="3"
+    app:radius="5"
+    app:unFocusColor="@color/color_4dffffff">
+    <TextView
+        android:textSize="11.5sp"
+        android:textColor="@drawable/selector_vod_play_btn_textcolor"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:id="@+id/item_tv"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:duplicateParentState="true"
+        android:layout_width="72dp"
+        android:layout_height="30dp"
+        android:text="play"
+        android:singleLine="true"
+        android:layout_centerInParent="true"
+        android:marqueeRepeatLimit="marquee_forever"/>
+</org.bitspark.android.view.MyProcessRelativeLayout>

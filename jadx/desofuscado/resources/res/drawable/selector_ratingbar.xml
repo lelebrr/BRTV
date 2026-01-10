@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="true"
+        android:drawable="@mipmap/vod_score_icon_3x"
+        android:state_activated="true"/>
+    <item
+        android:state_selected="true"
+        android:drawable="@mipmap/vod_score_half_icon_3x"
+        android:state_activated="false"/>
+    <item
+        android:state_selected="false"
+        android:drawable="@mipmap/vod_score_grey_icon_3x"
+        android:state_activated="false"/>
+</selector>

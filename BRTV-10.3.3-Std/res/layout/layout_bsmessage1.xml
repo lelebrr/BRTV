@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/message_head" android:background="@drawable/popup_window" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip">
+            <ImageView android:id="@id/message_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:src="@mipmap/message_icon" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/message_text" android:id="@id/message_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:text="@string/message" android:layout_toRightOf="@id/message_icon" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/popup_window1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/message_head" android:layout_centerInParent="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12.5sp" android:textColor="@color/message_body" android:gravity="left|top" android:id="@id/message_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="7.0dip" android:layout_marginRight="14.0dip" android:layout_marginBottom="14.0dip" android:text="" android:singleLine="false" android:lineSpacingExtra="5.0dip" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

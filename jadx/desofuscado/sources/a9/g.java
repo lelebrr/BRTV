@@ -1,0 +1,7 @@
+package a9;
+
+/* compiled from: MyApplication */
+/* loaded from: classes.dex */
+public interface g extends i {
+    h getKey();
+}

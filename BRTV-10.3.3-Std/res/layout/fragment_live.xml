@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/live_menu" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/grouch_ch_search_v" android:paddingLeft="17.5dip" android:layout_width="167.5dip" android:layout_height="54.0dip">
+        <ImageView android:id="@id/group_search_icon" android:visibility="visible" android:layout_width="21.0dip" android:layout_height="21.0dip" android:src="@mipmap/search_icon" android:layout_centerVertical="true" />
+        <EditText android:textSize="18.0sp" android:textColor="#ffffffff" android:textColorHint="#eeffffff" android:id="@id/group_ch_search" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="7.5dip" android:layout_marginRight="7.5dip" android:hint="@string/Search" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/group_search_icon" android:layout_centerVertical="true" android:textCursorDrawable="@drawable/search_cursor_color" />
+    </RelativeLayout>
+    <androidx.leanback.widget.VerticalGridView android:id="@id/vg_group" android:layout_width="167.5dip" android:layout_height="fill_parent" android:layout_marginTop="54.0dip" style="@style/GroupVerticalGridStyle" />
+    <androidx.leanback.widget.VerticalGridView android:id="@id/rv_channel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/vg_group" style="@style/ChannelVerticalGridStyle" />
+    <ExpandableListView android:id="@id/epg_listview" android:scrollbars="none" android:nextFocusUp="@id/epg_listview" android:nextFocusDown="@id/epg_listview" android:descendantFocusability="afterDescendants" android:layout_width="300.0dip" android:layout_height="fill_parent" android:listSelector="@drawable/epg_focus_bg" android:groupIndicator="@null" android:divider="@null" android:layout_toRightOf="@id/rv_channel" />
+</RelativeLayout>

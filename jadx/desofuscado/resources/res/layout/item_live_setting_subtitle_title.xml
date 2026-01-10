@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="12sp"
+    android:textColor="@color/color_73ffffff"
+    android:id="@+id/tv_title"
+    android:tag="layout/item_live_setting_subtitle_title_0"
+    android:paddingBottom="4dp"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:layout_width="234dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"/>

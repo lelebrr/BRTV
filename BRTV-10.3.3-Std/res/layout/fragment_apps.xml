@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/apps_menu" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="35.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="35.0dip" android:layout_marginBottom="20.0dip">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/apps_rview" android:scrollbars="none" android:clipToPadding="false" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" />
+    </RelativeLayout>
+    <org.bitspark.android.view.CircularProgressBar android:id="@id/loading_progress" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_centerInParent="true" />
+</RelativeLayout>

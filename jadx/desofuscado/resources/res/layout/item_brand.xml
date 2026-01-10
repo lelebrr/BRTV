@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/selector_home_brand"
+    android:padding="2dp"
+    android:nextFocusUp="@+id/banner"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:stateListAnimator="@drawable/animator_select_film_img">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv"
+        android:layout_width="72dp"
+        android:layout_height="72dp"/>
+</FrameLayout>

@@ -1,0 +1,171 @@
+package androidx.media3.exoplayer.rtsp;
+
+import android.net.Uri;
+import androidx.media3.common.util.Util;
+import d7.d0;
+import d7.s1;
+import d7.u1;
+import d7.z1;
+import java.util.HashMap;
+import java.util.Objects;
+
+/* compiled from: MyApplication */
+/* loaded from: classes.dex */
+final class SessionDescription {
+    public static final String ATTR_CONTROL = "control";
+    public static final String ATTR_FMTP = "fmtp";
+    public static final String ATTR_LENGTH = "length";
+    public static final String ATTR_RANGE = "range";
+    public static final String ATTR_RTPMAP = "rtpmap";
+    public static final String ATTR_TOOL = "tool";
+    public static final String ATTR_TYPE = "type";
+    public static final String SUPPORTED_SDP_VERSION = "0";
+    public final z1 attributes;
+    public final int bitrate;
+    public final String connection;
+    public final String emailAddress;
+    public final String key;
+    public final u1 mediaDescriptionList;
+    public final String origin;
+    public final String phoneNumber;
+    public final String sessionInfo;
+    public final String sessionName;
+    public final String timing;
+    public final Uri uri;
+
+    /* compiled from: MyApplication */
+    public static final class Builder {
+        private String connection;
+        private String emailAddress;
+        private String key;
+        private String origin;
+        private String phoneNumber;
+        private String sessionInfo;
+        private String sessionName;
+        private String timing;
+        private Uri uri;
+        private final HashMap<String, String> attributes = new HashMap<>();
+        private final s1 mediaDescriptionListBuilder = new s1(4);
+        private int bitrate = -1;
+
+        public Builder addAttribute(String str, String str2) {
+            this.attributes.put(str, str2);
+            return this;
+        }
+
+        public Builder addMediaDescription(MediaDescription mediaDescription) {
+            this.mediaDescriptionListBuilder.a(mediaDescription);
+            return this;
+        }
+
+        public SessionDescription build() {
+            return new SessionDescription(this);
+        }
+
+        public Builder setBitrate(int i6) {
+            this.bitrate = i6;
+            return this;
+        }
+
+        public Builder setConnection(String str) {
+            this.connection = str;
+            return this;
+        }
+
+        public Builder setEmailAddress(String str) {
+            this.emailAddress = str;
+            return this;
+        }
+
+        public Builder setKey(String str) {
+            this.key = str;
+            return this;
+        }
+
+        public Builder setOrigin(String str) {
+            this.origin = str;
+            return this;
+        }
+
+        public Builder setPhoneNumber(String str) {
+            this.phoneNumber = str;
+            return this;
+        }
+
+        public Builder setSessionInfo(String str) {
+            this.sessionInfo = str;
+            return this;
+        }
+
+        public Builder setSessionName(String str) {
+            this.sessionName = str;
+            return this;
+        }
+
+        public Builder setTiming(String str) {
+            this.timing = str;
+            return this;
+        }
+
+        public Builder setUri(Uri uri) {
+            this.uri = uri;
+            return this;
+        }
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || SessionDescription.class != obj.getClass()) {
+            return false;
+        }
+        SessionDescription sessionDescription = (SessionDescription) obj;
+        if (this.bitrate == sessionDescription.bitrate) {
+            z1 z1Var = this.attributes;
+            z1 z1Var2 = sessionDescription.attributes;
+            z1Var.getClass();
+            if (d0.i(z1Var, z1Var2) && this.mediaDescriptionList.equals(sessionDescription.mediaDescriptionList) && Objects.equals(this.origin, sessionDescription.origin) && Objects.equals(this.sessionName, sessionDescription.sessionName) && Objects.equals(this.timing, sessionDescription.timing) && Objects.equals(this.sessionInfo, sessionDescription.sessionInfo) && Objects.equals(this.uri, sessionDescription.uri) && Objects.equals(this.emailAddress, sessionDescription.emailAddress) && Objects.equals(this.phoneNumber, sessionDescription.phoneNumber) && Objects.equals(this.connection, sessionDescription.connection) && Objects.equals(this.key, sessionDescription.key)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        int iHashCode = (this.mediaDescriptionList.hashCode() + ((this.attributes.hashCode() + 217) * 31)) * 31;
+        String str = this.origin;
+        int iHashCode2 = (iHashCode + (str == null ? 0 : str.hashCode())) * 31;
+        String str2 = this.sessionName;
+        int iHashCode3 = (iHashCode2 + (str2 == null ? 0 : str2.hashCode())) * 31;
+        String str3 = this.timing;
+        int iHashCode4 = (((iHashCode3 + (str3 == null ? 0 : str3.hashCode())) * 31) + this.bitrate) * 31;
+        String str4 = this.sessionInfo;
+        int iHashCode5 = (iHashCode4 + (str4 == null ? 0 : str4.hashCode())) * 31;
+        Uri uri = this.uri;
+        int iHashCode6 = (iHashCode5 + (uri == null ? 0 : uri.hashCode())) * 31;
+        String str5 = this.emailAddress;
+        int iHashCode7 = (iHashCode6 + (str5 == null ? 0 : str5.hashCode())) * 31;
+        String str6 = this.phoneNumber;
+        int iHashCode8 = (iHashCode7 + (str6 == null ? 0 : str6.hashCode())) * 31;
+        String str7 = this.connection;
+        int iHashCode9 = (iHashCode8 + (str7 == null ? 0 : str7.hashCode())) * 31;
+        String str8 = this.key;
+        return iHashCode9 + (str8 != null ? str8.hashCode() : 0);
+    }
+
+    private SessionDescription(Builder builder) {
+        this.attributes = z1.b(builder.attributes);
+        this.mediaDescriptionList = builder.mediaDescriptionListBuilder.g();
+        this.sessionName = (String) Util.castNonNull(builder.sessionName);
+        this.origin = (String) Util.castNonNull(builder.origin);
+        this.timing = (String) Util.castNonNull(builder.timing);
+        this.uri = builder.uri;
+        this.connection = builder.connection;
+        this.bitrate = builder.bitrate;
+        this.key = builder.key;
+        this.emailAddress = builder.emailAddress;
+        this.phoneNumber = builder.phoneNumber;
+        this.sessionInfo = builder.sessionInfo;
+    }
+}

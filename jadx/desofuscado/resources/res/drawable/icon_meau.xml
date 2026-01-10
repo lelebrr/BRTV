@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="48dp"
+    android:width="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M24,24m-22.5,0a22.5,22.5 0,1 1,45 0a22.5,22.5 0,1 1,-45 0"
+        android:strokeColor="@color/player_sub_option_text_color_selected"
+        android:strokeWidth="3"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@color/player_sub_option_text_color_selected"
+        android:pathData="M15.5,15L32.5,15A1.5,1.5 0,0 1,34 16.5L34,16.5A1.5,1.5 0,0 1,32.5 18L15.5,18A1.5,1.5 0,0 1,14 16.5L14,16.5A1.5,1.5 0,0 1,15.5 15z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@color/player_sub_option_text_color_selected"
+        android:pathData="M15.5,23L32.5,23A1.5,1.5 0,0 1,34 24.5L34,24.5A1.5,1.5 0,0 1,32.5 26L15.5,26A1.5,1.5 0,0 1,14 24.5L14,24.5A1.5,1.5 0,0 1,15.5 23z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@color/player_sub_option_text_color_selected"
+        android:pathData="M15.5,31L32.5,31A1.5,1.5 0,0 1,34 32.5L34,32.5A1.5,1.5 0,0 1,32.5 34L15.5,34A1.5,1.5 0,0 1,14 32.5L14,32.5A1.5,1.5 0,0 1,15.5 31z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1"
+        android:fillType="evenOdd"/>
+</vector>

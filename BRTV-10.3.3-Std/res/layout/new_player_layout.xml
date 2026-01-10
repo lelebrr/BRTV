@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/play_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.bitspark.android.view.MyFrameLayout android:id="@id/playerContent" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.media3.ui.PlayerView android:layout_gravity="center" android:id="@id/exoPlayerView" android:background="@android:color/black" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        <org.bitspark.android.view.SafeVideoView android:layout_gravity="center" android:id="@id/video_view" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </org.bitspark.android.view.MyFrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <org.bitspark.android.view.CircularProgressBar android:id="@id/loading_progress" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_centerInParent="true" />
+        <TextView android:textSize="36.0sp" android:textColor="#ffffffff" android:id="@id/player_overlay_info" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <include android:id="@id/control_live_play" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/live_control_layout" />
+    <include layout="@layout/vod_control_layout" />
+    <RelativeLayout android:layout_gravity="right" android:id="@id/dl_layout" android:layout_width="55.0dip" android:layout_height="18.0dip" android:layout_marginTop="7.5dip" android:layout_marginRight="2.5dip">
+        <TextView android:textSize="9.0sp" android:textColor="#ffeeeeee" android:gravity="end" android:id="@id/dl_rate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="0 B/S" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/live_list_bg" android:background="@mipmap/loginsuccess_2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

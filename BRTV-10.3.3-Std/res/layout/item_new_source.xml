@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/item_new_source" android:background="@drawable/selector_source_item_bg" android:paddingLeft="7.0dip" android:paddingRight="7.0dip" android:focusable="true" android:focusableInTouchMode="true" android:nextFocusUp="@id/item_new_source" android:layout_width="wrap_content" android:layout_height="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/selected_icon" android:duplicateParentState="true" android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@drawable/selector_source_item_icon" />
+    <TextView android:textSize="15.0sp" android:textColor="@drawable/selector_source_item_tv" android:ellipsize="end" android:gravity="center" android:id="@id/source_name" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:text="480x680" android:maxLines="1" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+</LinearLayout>

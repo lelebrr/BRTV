@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="22.0dip" android:width="22.0dip">
+        <shape>
+            <solid android:color="@color/transparency" />
+        </shape>
+    </item>
+    <item android:height="13.0dip" android:width="19.0dip" android:drawable="@drawable/hide_password" android:left="2.0dip" android:top="5.0dip" />
+</layer-list>

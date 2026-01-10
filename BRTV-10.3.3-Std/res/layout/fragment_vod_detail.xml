@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_vod_detail_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:background="@color/color_dd1d1d1d" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/backImage" android:paddingRight="18.0dip" android:paddingBottom="18.0dip" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginTop="13.0dip" android:src="@mipmap/backlist_button" android:scaleType="fitStart" android:layout_alignLeft="@id/vod_image" />
+    <ImageView android:id="@id/vod_image" android:layout_width="260.0dip" android:layout_height="360.0dip" android:layout_marginLeft="19.0dip" android:layout_marginTop="58.0dip" android:scaleType="fitStart" />
+    <LinearLayout android:orientation="vertical" android:id="@id/detail_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_marginRight="43.0dip" android:layout_toRightOf="@id/vod_image" android:layout_alignTop="@id/vod_image">
+        <org.bitspark.android.view.AlwaysMarqueeTextView android:textSize="32.0sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="marquee" android:id="@id/vod_detail_name" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Landman" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_ratingbar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/hg_ratingbar" android:layout_width="wrap_content" android:layout_height="14.0dip" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/color_fdd259" android:id="@id/tv_ratingbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip">
+            <TextView android:textSize="11.0sp" android:textColor="@color/color_80ffffff" android:id="@id/vod_tag" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="tag" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/player_sub_option_text_color_selected" android:id="@id/tv_year" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" />
+        </LinearLayout>
+        <TextView android:textColor="@color/white" android:id="@id/vod_description" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" />
+        <org.bitspark.android.view.MyProcessRelativeLayout android:id="@id/vod_play" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="84.0dip" android:layout_height="30.0dip" android:layout_marginTop="28.0dip" app:processHeight="3" app:radius="5">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/vod_play_icon" android:duplicateParentState="true" android:layout_width="13.0dip" android:layout_height="10.0dip" android:src="@mipmap/vod_play_focus_3x" android:layout_centerVertical="true" />
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/tvPlayer_000000_100" android:id="@id/tv_play" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.5dip" android:text="@string/Play" />
+            </LinearLayout>
+        </org.bitspark.android.view.MyProcessRelativeLayout>
+        <ViewStub android:id="@id/vod_vg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="16.0dip" />
+        <RelativeLayout android:orientation="vertical" android:id="@id/vod_season_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="16.0dip">
+            <org.bitspark.android.view.LeanbackTabLayout android:id="@id/tab_layout" android:layout_width="fill_parent" android:layout_height="22.0dip" android:layout_marginTop="10.0dip" app:tabBackground="@color/transparency" app:tabIndicatorFullWidth="false" app:tabIndicatorHeight="0.0dip" app:tabMaxWidth="120.0dip" app:tabMode="scrollable" app:tabRippleColor="@null" />
+            <View android:id="@id/season_underline" android:background="#29ffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/tab_layout" />
+            <androidx.viewpager2.widget.ViewPager2 android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="16.0dip" android:layout_below="@id/tab_layout" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

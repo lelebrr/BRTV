@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/epg_item_1line"
+    android:background="@drawable/epg_focus_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="40dp">
+        <TextView
+            android:textSize="18sp"
+            android:textColor="@color/channel_epg_no_addr_txt"
+            android:ellipsize="marquee"
+            android:id="@+id/epg_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:maxWidth="260dp"
+            android:singleLine="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</RelativeLayout>

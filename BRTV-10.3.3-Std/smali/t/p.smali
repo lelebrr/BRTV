@@ -1,0 +1,11 @@
+.class public abstract Lt/p;
+.super Ljava/lang/Object;
+.source "MyApplication"
+
+# interfaces
+.implements Landroid/view/animation/Interpolator;
+
+
+# virtual methods
+.method public abstract a()F
+.end method

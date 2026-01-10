@@ -1,0 +1,7 @@
+.class public final Lea/q0;
+.super Ljava/lang/Object;
+.source "MyApplication"
+
+
+# instance fields
+.field public a:I

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/cell_root"
+    android:paddingBottom="8dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="134dp"
+    android:layout_height="wrap_content"
+    android:stateListAnimator="@drawable/animator_select_film_img">
+    <ImageView
+        android:id="@+id/image"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="114dp"
+        android:layout_height="161dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"/>
+    <org.bitspark.android.view.GradientBorderView
+        android:id="@+id/image_border"
+        android:layout_width="96dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="9dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:ellipsize="marquee"
+        android:id="@+id/channel_name"
+        android:paddingLeft="14dp"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:singleLine="true"
+        android:layout_below="@+id/image"/>
+    <ImageView
+        android:id="@+id/collectedIcon"
+        android:layout_width="16dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="27dp"
+        android:src="@mipmap/vod_collected_icon_3x"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="vertical" android:id="@id/debugLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginRight="15.0dip">
+        <TextView android:textSize="20.0sp" android:id="@id/bufferView" android:text="Init ..." style="@style/debug_text" />
+        <TextView android:id="@id/drView" android:text="0" style="@style/debug_text" />
+        <TextView android:id="@id/urView" android:text="0" style="@style/debug_text" />
+        <TextView android:id="@id/totalView" android:text="0" style="@style/debug_text" />
+        <TextView android:id="@id/initedView" android:text="0.0.0" style="@style/debug_text" />
+        <TextView android:id="@id/peersView" android:text="0" style="@style/debug_text" />
+        <TextView android:id="@id/prepareView" android:text="_._/_._" style="@style/debug_text" />
+        <TextView android:id="@id/retvView" android:text="0" style="@style/debug_text" />
+        <TextView android:id="@id/durationView" android:text="0D 00:00:00" style="@style/debug_text" />
+        <TextView android:id="@id/sTypeView" android:text="0" style="@style/debug_text" />
+        <TextView android:id="@id/scVerView" android:text="" style="@style/debug_text" />
+        <TextView android:id="@id/appVerView" android:text="x.x.x" style="@style/debug_text" />
+        <TextView android:id="@id/appPackageView" android:text="io.binstream.demo" style="@style/debug_text" />
+        <TextView android:id="@id/netTypeView" android:text="unknow" style="@style/debug_text" />
+    </LinearLayout>
+</FrameLayout>

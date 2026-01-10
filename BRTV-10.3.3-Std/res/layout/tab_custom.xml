@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/custom_view" android:layout_width="100.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="@drawable/selector_season_item" android:id="@id/tv" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:textAllCaps="false" />
+    <View android:id="@id/tab_underline" android:background="@drawable/shape_color_fff" android:paddingLeft="7.0dip" android:paddingRight="7.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

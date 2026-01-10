@@ -1,0 +1,20 @@
+version: 2.12.1
+apkFileName: BRTV-10.3.3-Std.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 21
+  targetSdkVersion: 35
+packageInfo:
+  forcedPackageId: 127
+versionInfo:
+  versionCode: 1033
+  versionName: 10.3.3
+doNotCompress:
+- arsc
+- jpg
+- ogg
+- png
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm

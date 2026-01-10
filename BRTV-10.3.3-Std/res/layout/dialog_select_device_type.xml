@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/color_eb161616" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@color/player_text_color_ffffff" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_type_dialog_title" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/live_icon_bg_start_color" android:id="@id/tv_message" android:layout_width="446.0dip" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/device_type_dialog_message" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_device_type_tv" android:background="@drawable/selector_rb_device_type_bg" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_marginRight="126.0dip">
+            <ImageView android:layout_width="59.0dip" android:layout_height="59.0dip" android:layout_marginTop="33.0dip" android:src="@mipmap/device_tv_2x" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip">
+                <ImageView android:id="@id/tv_selected_icon" android:duplicateParentState="true" android:layout_width="17.0dip" android:layout_height="17.0dip" android:src="@drawable/selector_rb_icon" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="TV" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_device_type_phone" android:background="@drawable/selector_rb_device_type_bg" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="160.0dip" android:layout_height="160.0dip">
+            <ImageView android:layout_width="59.0dip" android:layout_height="59.0dip" android:layout_marginTop="33.0dip" android:src="@mipmap/device_phone_2x" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip">
+                <ImageView android:id="@id/phone_selected_icon" android:duplicateParentState="true" android:layout_width="17.0dip" android:layout_height="17.0dip" android:src="@drawable/selector_rb_icon" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="Phone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:textSize="14.0sp" android:textColor="@color/color_ffffff" android:id="@id/btn_confirm" android:background="@drawable/selector_device_type_confirm" android:layout_width="240.0dip" android:layout_height="42.0dip" android:layout_marginTop="24.0dip" android:text="CONFIRM" />
+</LinearLayout>

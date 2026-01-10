@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/root_vod_child" android:clipChildren="false" android:clipToPadding="false" android:layout_width="130.0dip" android:layout_height="35.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/group_name_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_centerInParent="true">
+        <ImageView android:id="@id/group_type_icon" android:visibility="gone" android:layout_width="17.0dip" android:layout_height="17.0dip" android:layout_marginRight="4.0dip" android:src="@mipmap/group_type_favorite" android:layout_centerVertical="true" />
+        <TextView android:textSize="16.0sp" android:ellipsize="marquee" android:id="@id/group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="group" android:singleLine="true" android:layout_toRightOf="@id/group_type_icon" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/underline" android:layout_width="140.0dip" android:layout_height="3.0dip" android:layout_marginTop="2.5dip" android:scaleType="fitXY" android:layout_below="@id/group_name_line" android:layout_centerHorizontal="true" />
+</RelativeLayout>

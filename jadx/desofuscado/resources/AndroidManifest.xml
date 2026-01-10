@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1033"
+    android:versionName="10.3.3"
+    android:installLocation="auto"
+    android:compileSdkVersion="35"
+    android:compileSdkVersionCodename="15"
+    package="com.p2elite.brtv2"
+    platformBuildVersionCode="35"
+    platformBuildVersionName="15">
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="35"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <queries>
+        <package android:name="com.google.android.gms.policy_cast_dynamite"/>
+    </queries>
+    <permission
+        android:name="com.p2elite.brtv2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.p2elite.brtv2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/hdplayer_icon"
+        android:name="org.bitspark.android.SpkApplication"
+        android:testOnly="false"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:banner="@drawable/banner"
+        android:extractNativeLibs="true"
+        android:usesCleartextTraffic="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity
+            android:theme="@style/ThemeSplash"
+            android:label="@string/app_name"
+            android:name="org.bitspark.android.Spark"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="landscape"
+            android:configChanges="screenSize|orientation|keyboardHidden|locale">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:label="start"
+            android:name="org.bitspark.android.broadcast.ActionReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+                <action android:name="android.intent.action.SCREEN_ON"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.tvbus.engine.TVService"/>
+        <meta-data
+            android:name="org.bitspark.android.utils.CustomGlideModule"
+            android:value="GlideModule"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.p2elite.brtv2.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="960"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="540"/>
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="org.bitspark.android.utils.CastOptionsProvider"/>
+        <receiver
+            android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.cast.framework.ReconnectionService"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.p2elite.brtv2.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <provider
+            android:name="me.jessyan.autosize.InitProvider"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.p2elite.brtv2.autosize-init-provider"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct"/>
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false"/>
+    </application>
+</manifest>

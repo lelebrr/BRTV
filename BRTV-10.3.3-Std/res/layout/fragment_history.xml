@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/history_menu" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/history_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="35.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="35.0dip" android:layout_marginBottom="10.0dip">
+        <TextView android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_live" style="@style/history_title_text" />
+        <include android:id="@id/live_history_placehold" android:visibility="gone" android:layout_width="175.0dip" android:layout_height="80.0dip" android:layout_marginTop="7.5dip" android:layout_marginBottom="7.5dip" layout="@layout/history_item_hold" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/history_live_rview" android:scrollbars="none" android:clipToPadding="false" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:id="@id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/video_playback_vod" style="@style/history_title_text" />
+        <include android:id="@id/vod_history_placehold" android:visibility="gone" android:layout_width="175.0dip" android:layout_height="80.0dip" android:layout_marginTop="7.5dip" android:layout_marginBottom="7.5dip" layout="@layout/history_item_hold" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/history_vod_rview" android:scrollbars="none" android:clipToPadding="false" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.5dip" android:layout_marginBottom="7.5dip" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/vod_detail_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

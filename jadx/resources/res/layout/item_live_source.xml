@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:id="@+id/root"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@drawable/selector_live_source_text_color"
+        android:gravity="center_vertical"
+        android:id="@+id/tv"
+        android:background="@drawable/selector_live_source_tv_bg"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"/>
+</LinearLayout>

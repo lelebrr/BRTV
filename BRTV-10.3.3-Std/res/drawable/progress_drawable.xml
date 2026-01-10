@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="50.0dip" />
+            <solid android:color="@color/tvPlayer_FFFFFF_30" />
+            <size android:height="3.0dip" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="50.0dip" />
+                <solid android:color="@color/tvPlayer_FFFFFF_35" />
+                <size android:height="3.0dip" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient android:startColor="@color/vod_border_color_start" android:endColor="@color/vod_border_color_start" android:angle="135.0" android:type="linear" />
+                <size android:height="3.0dip" />
+                <corners android:radius="50.0dip" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>
